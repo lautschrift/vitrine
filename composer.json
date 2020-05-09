@@ -1,5 +1,5 @@
 {
-  "name": "lautschrift/vitrine-bundle",
+  "name": "lautschrift/vitrinen-bundle",
   "description": "Erfassen von Museumsvitrinen",
   "keywords": ["museen","contao"],
   "type": "contao-bundle",
