@@ -42,6 +42,12 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
 				 'inputType' => 'text',
 		 'sql'       => "varchar(255) NOT NULL default ''"
  );
+ $GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_date] = array(
+		'label' 	=> array('Datierung', 'Datierung'),
+				'eval' 		=> array('tl_class' => 'w50'),
+				'inputType' => 'text',
+		'sql'       => "varchar(255) NOT NULL default ''"
+ );
  $GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_more] = array(
 		 'label' 	=> array('Sonstiges', 'Sonstiges'),
 				 'eval' 		=> array('tl_class' => 'w50'),

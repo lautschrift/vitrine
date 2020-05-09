@@ -1,0 +1,8 @@
+<?php $this->extend('block_searchable'); ?>
+<?php $this->block('content'); ?>
+
+
+	<div>Hello World</<div>
+
+
+<?php $this->endblock(); ?>
