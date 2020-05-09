@@ -17,5 +17,5 @@ array_insert($GLOBALS['BE_MOD']['content'], 1, array
  */
 
 $GLOBALS['TL_CTE']['Vitrine'] = array(
-		'museum' => 'ContentVitrine'
+		'vitrine' => 'ContentVitrine'
 );

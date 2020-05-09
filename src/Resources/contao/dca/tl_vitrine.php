@@ -2,9 +2,9 @@
 /**
  * Table tl_museum
  */
-$GLOBALS['TL_DCA']['tl_museum'] = array
+$GLOBALS['TL_DCA']['tl_vitrine'] = array
 (
-	'dataContainer'               => 'Table',	
+	'dataContainer'               => 'Table',
 	'switchToEdit'                => true,
 	'enableVersioning'            => true,
 	'sql' => array
@@ -17,7 +17,7 @@ $GLOBALS['TL_DCA']['tl_museum'] = array
 	)
 );
 
-class tl_museum extends Backend
+class tl_vitrine extends Backend
 {
-	
+
 }
