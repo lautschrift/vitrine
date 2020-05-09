@@ -1,6 +1,6 @@
 {
-  "name": "lautschrift/vitrinebundle",
-  "description": "Erfassen von M;useumsvitrinen",
+  "name": "lautschrift/vitrine-bundle",
+  "description": "Erfassen von Museumsvitrinen",
   "keywords": ["museen","contao"],
   "type": "contao-bundle",
   "homepage": "https://lautschrift.com",
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-		"Lautschrift\\MuseumBundle\\": "src"
+		"Lautschrift\\VitrinenBundle\\": "src"
 		}
   },
   "extra": {
