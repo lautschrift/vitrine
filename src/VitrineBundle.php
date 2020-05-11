@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
-namespace Lautschrift\VitrinenBundle;
+namespace Lautschrift\VitrineBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * This is the bundle class. */
-class VitrinenBundle extends Bundle
+class VitrineBundle extends Bundle
 { }
