@@ -1,5 +1,7 @@
 <?php
-class ContentVitrine extends ContentElement
+namespace Lautschrift\VitrineBundle\Resources\contao\classes;
+
+class ContentVitrine extends \ContentElement
 {
 	protected $strTemplate = 'ce_vitrine';
 
@@ -8,7 +10,7 @@ class ContentVitrine extends ContentElement
 			{
 					if (TL_MODE == 'BE') {
 							$template = new \BackendTemplate('be_wildcard');
-							$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['vitrine'][0]).' ###';
+							$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['Vitrine'][0]).' ###';
 
 							return $template->parse();
 					}
