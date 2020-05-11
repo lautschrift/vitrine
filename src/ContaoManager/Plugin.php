@@ -1,8 +1,8 @@
 <?php
 declare(strict_types = 1);
-namespace Lautschrift\VitrinenBundle\ContaoManager;
+namespace Lautschrift\VitrineBundle\ContaoManager;
 
-use Lautschrift\VitrinenBundle\VitrinenBundle;
+use Lautschrift\VitrinenBundle\VitrineBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
@@ -15,6 +15,6 @@ class Plugin implements BundlePluginInterface
 		return [
 				BundleConfig::create(VitrinenBundle::class)
 				->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle', 'Contao\ManagerBundle\ContaoManagerBundle'])
-				->setReplace(['vitrine'])
+				->setReplace(['VitrineBundle'])
 		]; }
 }
