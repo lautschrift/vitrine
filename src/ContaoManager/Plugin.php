@@ -13,7 +13,7 @@ class Plugin implements BundlePluginInterface
 	public function getBundles(ParserInterface $parser)
 	{
 		return [
-				BundleConfig::create(VitrinenBundle::class)
+				BundleConfig::create(VitrineBundle::class)
 				->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle', 'Contao\ManagerBundle\ContaoManagerBundle'])
 				->setReplace(['VitrineBundle'])
 		]; }
