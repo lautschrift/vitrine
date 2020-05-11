@@ -10,7 +10,7 @@ class ContentVitrine extends \ContentElement
 			{
 					if (TL_MODE == 'BE') {
 							$template = new \BackendTemplate('be_wildcard');
-							$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['Vitrine'][0]).' ###';
+							$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['test'][0]).' ###';
 
 							return $template->parse();
 					}
