@@ -3,17 +3,19 @@
 /**
  * Back end modules
  */
+array_insert($GLOBALS['BE_MOD']['content'], 1, array
+(
+	'Vitrine' => array
+	(
+		'tables'	=> array('tl_vitrine'),
 
+	)
+));
 
 /**
  * Content elements
  */
 
-
-array_insert($GLOBALS['TL_CTE']['Vitrine'] ,1, array(
-		'Vitrine' => 'Lautschrift\\VitrineBundle\\Resources\\contao\\classes\\ContentVitrine'
-));
-
-
-//$GLOBALS['TL_CTE']['Museum']['Museum'] = '\\lautschrift\\museum-bundle\\src\\Resources\\contao\\classes\\ContentMuseum';
-$GLOBALS['TL_LANG']['CTE']['Vitrine'] = array('Vitrine','Einbinden einer Museums Vitrine ins Fundfenster');
+$GLOBALS['TL_CTE']['Vitrine'] = array(
+		'vitrine' => 'ContentVitrine'
+);
