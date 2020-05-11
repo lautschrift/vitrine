@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-		"Lautschrift\\VitrineBundle\\": "src"
+		"Lautschrift\\VitrineBundle\\": "src/"
 		}
   },
   "extra": {
