@@ -1,5 +1,5 @@
 {
-  "name": "lautschrift/vitrinen-bundle",
+  "name": "lautschrift/vitrine-bundle",
   "description": "Erfassen von Museumsvitrinen",
   "keywords": ["museen","contao"],
   "type": "contao-bundle",
@@ -24,6 +24,6 @@
 		}
   },
   "extra": {
-    "contao-manager-plugin": "Lautschrift\\VitrinenBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Lautschrift\\VitrineBundle\\ContaoManager\\Plugin"
   }
 }
