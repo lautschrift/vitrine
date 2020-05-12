@@ -1,17 +1,9 @@
 <?php
-
-/*
- * This file is part of [package name].
- *
- * (c) John Doe
- *
- * @license LGPL-3.0-or-later
- */
-
-namespace Lautschrift\VitrineBundle;
-
+declare(strict_types = 1);
+namespace Lautschrift\VitrinenBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class VitrineBundle extends Bundle
-{
-}
+/**
+ * This is the bundle class. */
+class VitrinenBundle extends Bundle
+{ }

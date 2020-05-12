@@ -1,1 +1,1 @@
-# Vitrine Bundle
+# museum-bundle

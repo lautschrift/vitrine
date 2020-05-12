@@ -1,7 +1,19 @@
-
 <?php
 /*
-namespace Lautschrift\VitrineBundle\Resources\contao\classes;
+class ContentVitrine extends ContentElement
+{
+	protected $strTemplate = 'ce_vitrine';
+
+	protected function compile()
+	{
+		$rs = Database::getInstance()
+		->query('SELECT * FROM tl_content');
+
+		$this->Template->vitrine = $rs->fetchAllAssoc();
+	}
+}
+*/
+namespace Lautschrift\VitrinenBundle\Resources\contao\classes;
 
 class ContentVitrine extends \ContentElement
 {
@@ -26,21 +38,7 @@ class ContentVitrine extends \ContentElement
 		$rs = \Database::getInstance()
 		->query('SELECT * FROM tl_content');
 
-		$this->Template->Vitrine = $rs->fetchAllAssoc();
-	}
-
-}
-*/
-
-class ContentVitrine extends ContentElement
-{
-	protected $strTemplate = 'ce_vitrine';
-
-	protected function compile()
-	{
-		$rs = Database::getInstance()
-		->query('SELECT * FROM tl_content');
-
 		$this->Template->vitrine = $rs->fetchAllAssoc();
 	}
+
 }
