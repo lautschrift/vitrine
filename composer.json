@@ -8,10 +8,6 @@
         {
             "name": "Steffen Krauth | lautschrift.com",
             "homepage": "https://github.com/leofeyer"
-        },
-        {
-            "name": "Contao Community",
-            "homepage": "https://lautschrift.com"
         }
     ],
     "require": {
