@@ -7,6 +7,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
 	{type_legend},type,headline;
 	{vitrine_legend},vitrine_name, text;
 	{vitrinedetails_legend}, vitrine_type, vitrine_material, vitrine_date, vitrine_more, vitrine_url;
+	{source_legend},singleSRC,size,imagemargin,fullsize,overwriteMeta;
 	{image_legend},addImage;
 	{template_legend:hide},customTpl;
 	{protected_legend:hide},protected;
@@ -61,59 +62,3 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
 				 'inputType' => 'text',
 		 'sql'       => "varchar(255) NOT NULL default ''"
  );
-
-
-/*
-$GLOBALS['TL_DCA']['tl_content']['fields']['c4g_map_id'] = array
-(
-		'label'                   => &$GLOBALS['TL_LANG']['tl_content']['c4g_map_id'],
-		'exclude'                 => true,
-		'inputType'               => 'select',
-		'options_callback'        => array('tl_content_c4g_maps', 'get_maps'),
-		'eval'                    => array('submitOnChange'=>true),
-		'sql'                     => "int(10) unsigned NOT NULL default '0'"
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['c4g_map_width'] = array
-(
-		'label'                   => &$GLOBALS['TL_LANG']['tl_content']['c4g_map_width'],
-		'exclude'                 => true,
-		'inputType'               => 'inputUnit',
-		'options'                 => array('px', '%', 'em', 'vh', 'vw', 'vmin', 'vmax', 'pt', 'pc', 'in', 'cm', 'mm'),
-		'eval'                    => array(
-				'rgxp'=>'digit_auto_inherit',
-				'tl_class'=>'w50',
-				'includeBlankOption'=>true
-		),
-		'sql'                     => "varchar(64) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['c4g_map_height'] = array
-(
-		'label'                   => &$GLOBALS['TL_LANG']['tl_content']['c4g_map_height'],
-		'exclude'                 => true,
-		'inputType'               => 'inputUnit',
-		'options'                 => array('px', '%', 'em', 'vh', 'vw', 'vmin', 'vmax', 'pt', 'pc', 'in', 'cm', 'mm'),
-		'eval'                    => array(
-				'rgxp'=>'digit_auto_inherit',
-				'tl_class'=>'w50',
-				'includeBlankOption'=>true
-		),
-		'sql'                     => "varchar(64) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['c4g_map_zoom'] = array
-(
-		'label'                   => &$GLOBALS['TL_LANG']['tl_content']['c4g_map_zoom'],
-		'exclude'                 => true,
-		'inputType'               => 'text',
-		'eval'                    => array('mandatory'=>false, 'rgxp'=>'digit', 'tl_class'=>'clr'),
-		'sql'                     => "int(10) unsigned NOT NULL default '0'"
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['c4g_map_default_mapservice'] = array
-(
-		'label'                   => &$GLOBALS['TL_LANG']['tl_content']['c4g_map_default_mapservice'],
-		'exclude'                 => true,
-		'inputType'               => 'select',
-		'options_callback'        => array('tl_content_c4g_maps', 'get_baselayers'),
-		'sql'                     => "int(10) unsigned NOT NULL default '0'"
-
-);
-*/
