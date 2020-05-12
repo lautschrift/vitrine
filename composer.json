@@ -1,6 +1,6 @@
 {
     "name": "contao/vitrine-bundle",
-    "type": "symfony-bundle",
+    "type": "contao-bundle",
     "description": "Vitrine",
     "homepage": "https://lautschrift.com",
     "license": "LGPL-3.0-or-later",
