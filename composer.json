@@ -1,8 +1,9 @@
 {
   "name": "lautschrift/vitrine-bundle",
+  "type": "contao-bundle",
   "description": "Erfassen von Museumsvitrinen",
   "keywords": ["museen","contao"],
-  "type": "contao-bundle",
+
   "homepage": "https://lautschrift.com",
   "license": "LGPL-3.0+",
   "authors":[
@@ -20,10 +21,10 @@
   },
   "autoload": {
     "psr-4": {
-		"Lautschrift\\VitrinenBundle\\": "src"
+		"Lautschrift\\VitrineBundle\\": "src/"
 		}
   },
   "extra": {
-    "contao-manager-plugin": "Lautschrift\\VitrinenBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Lautschrift\\VitrineBundle\\ContaoManager\\Plugin"
   }
 }
