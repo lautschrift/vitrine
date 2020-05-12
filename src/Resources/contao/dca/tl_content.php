@@ -3,7 +3,7 @@
  * Table tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['Vitrine'] = '
+$GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
 	{type_legend},type,headline;
 	{vitrine_legend},vitrine_name, text;
 	{vitrinedetails_legend}, vitrine_type, vitrine_material, vitrine_date, vitrine_more, vitrine_url;
@@ -41,12 +41,6 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['Vitrine'] = '
 				 'eval' 		=> array('tl_class' => 'w50'),
 				 'inputType' => 'text',
 		 'sql'       => "varchar(255) NOT NULL default ''"
- );
- $GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_date] = array(
-		'label' 	=> array('Datierung', 'Datierung'),
-				'eval' 		=> array('tl_class' => 'w50'),
-				'inputType' => 'text',
-		'sql'       => "varchar(255) NOT NULL default ''"
  );
  $GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_more] = array(
 		 'label' 	=> array('Sonstiges', 'Sonstiges'),
