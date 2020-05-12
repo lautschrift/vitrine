@@ -17,5 +17,9 @@ array_insert($GLOBALS['BE_MOD']['content'], 1, array
  */
 
 $GLOBALS['TL_CTE']['Vitrine'] = array(
-		'vitrine' => 'ContentVitrine'
+		'Vitrine' => 'Lautschrift\\VitrineBundle\\Resources\\contao\\classes\\ContentVitrine'
 );
+
+
+// Frontend modules
+// $GLOBALS['FE_MOD']['Vitrine']['Vitrine'] = 'Lautschrift\VitrineBundle\Module\VitrineBundleModule';
