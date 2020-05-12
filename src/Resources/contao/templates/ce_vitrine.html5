@@ -2,7 +2,16 @@
 <?php $this->block('content'); ?>
 
 
-	<div>Hello World</<div>
+	<?= $this->vitrine_name ?>
+	<div>
+  	<?= $this->text ?>
+	</div>
+	<div>
+			<?= $this->vitrine_type?>
+			<?= $this->vitrine_material?>
+			<?= $this->vitrine_date?>
+			<?= $this->vitrine_more?>
 
-
+			<?= $this->vitrine_url?>
+	</div>
 <?php $this->endblock(); ?>
