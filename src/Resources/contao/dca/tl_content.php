@@ -3,7 +3,7 @@
  * Table tl_content
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
+$GLOBALS['TL_DCA']['tl_content']['palettes']['Vitrine'] = '
 	{type_legend},type,headline;
 	{vitrine_legend},vitrine_name, text;
 	{vitrinedetails_legend}, vitrine_type, vitrine_material, vitrine_date, vitrine_more, vitrine_url;
