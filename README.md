@@ -1,1 +1,2 @@
-# museum-bundle
+# vitrine-Bundle
+# Museums Vitrinen Online
