@@ -6,6 +6,11 @@
 	<div>
   	<?= $this->text ?>
 	</div>
+	<div class="pic">
+		<?php if ($this->addImage): ?>
+			<?php $this->insert('image', $this->arrData); ?>
+		<?php endif; ?>
+	</div>
 	<div>
 			<?= $this->vitrine_type?>
 			<?= $this->vitrine_material?>

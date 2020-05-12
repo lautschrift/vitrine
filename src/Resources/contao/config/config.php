@@ -3,6 +3,7 @@
 /**
  * Back end modules
  */
+ /*
 array_insert($GLOBALS['BE_MOD']['content'], 1, array
 (
 	'Vitrine' => array
@@ -11,7 +12,7 @@ array_insert($GLOBALS['BE_MOD']['content'], 1, array
 
 	)
 ));
-
+*/
 /**
  * Content elements
  */
