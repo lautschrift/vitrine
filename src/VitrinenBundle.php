@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+
 namespace Lautschrift\VitrinenBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
