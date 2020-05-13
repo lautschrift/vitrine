@@ -9,24 +9,25 @@
 <?php $this->extend('block_searchable'); ?>
 <?php $this->block('content'); ?>
 
+<div class="vitrine">
 
-<!-- <?php $this->showTemplateVars(); ?> -->
+				<hr>
+					<?= $this->vitrine_name ?>
+					<div>
+				  	<?= $this->text ?>
+					</div>
+					<div class="pic">
+					  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
+					</div>
+					<div>
+							<?= $this->vitrine_type?>
+							<?= $this->vitrine_material?>
+							<?= $this->vitrine_date?>
+							<?= $this->vitrine_more?>
+				<br>
+				<hr>
+							<?= $this->vitrine_url?>
+					</div>
 
-<hr>
-	<?= $this->vitrine_name ?>
-	<div>
-  	<?= $this->text ?>
-	</div>
-	<div class="pic">
-	  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
-	</div>
-	<div>
-			<?= $this->vitrine_type?>
-			<?= $this->vitrine_material?>
-			<?= $this->vitrine_date?>
-			<?= $this->vitrine_more?>
-<br>
-<hr>
-			<?= $this->vitrine_url?>
-	</div>
+</div>
 <?php $this->endblock(); ?>
