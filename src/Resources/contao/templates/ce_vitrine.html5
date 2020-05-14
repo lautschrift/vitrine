@@ -10,24 +10,38 @@
 <?php $this->block('content'); ?>
 
 <div class="vitrine">
+	<div class="animatable">
 
-				<hr>
-					<?= $this->vitrine_name ?>
-					<div>
-				  	<?= $this->text ?>
-					</div>
-					<div class="pic">
-					  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
-					</div>
-					<div>
-							<?= $this->vitrine_type?>
-							<?= $this->vitrine_material?>
-							<?= $this->vitrine_date?>
-							<?= $this->vitrine_more?>
-				<br>
-				<hr>
-							<?= $this->vitrine_url?>
-					</div>
+		<div class="front">
+			<div class="front-pic">
+			 <?php $this->insert('image', $this->arrData); ?>
+			</div>
+		</div>
 
+		<div class="back">
+			<div class="grid12">
+				<h2>	<?= $this->vitrine_name ?></h2>
+			</div>
+			<div class="vitrine-text grid7">
+					<?= $this->text ?>
+			</div>
+
+
+
+			<div class="vitrine-pic grid4">
+			  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
+			</div>
+
+			<div class="vitrine-details grid7">
+			 	<p><span>Ansprache:	</span><?= $this->vitrine_type?></p>
+			 	<p><span>Material:	</span><?= $this->vitrine_material?></p>
+				<p><span>Datierung:	</span><?= $this->vitrine_date?></p>
+				<p><span>Sonstiges:	</span><?= $this->vitrine_more?></p>
+
+				<span>	</span><p><?= $this->vitrine_url?></p>
+			</div>
+		</div>
+
+	</div>
 </div>
 <?php $this->endblock(); ?>
