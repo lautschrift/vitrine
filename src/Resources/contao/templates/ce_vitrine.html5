@@ -9,13 +9,22 @@
 <?php $this->extend('block_searchable'); ?>
 <?php $this->block('content'); ?>
 
-<div class="vitrine">
+<div class="vitrine" id="<?php echo $title ?>">
 	<div class="animatable">
 
 		<div class="front">
-			<div class="front-pic">
-			 <?php $this->insert('image', $this->arrData); ?>
-			</div>
+
+			  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>" width="960px">
+				<div clas="front-navi">
+					<p class="front-navi">
+							<a href="javascript:void(0);" class="next" ></a>
+								</br>
+								<a href="javascript:void(0);" class="info"></a>
+							</br>
+								<a href="javascript:void(0);" class="previous" ></a>
+							</p>
+				</div>
+				<div class="front-title"><h2 class="front-title">	<?= $this->vitrine_name ?></h2></div>
 		</div>
 
 		<div class="back">
@@ -26,22 +35,46 @@
 					<?= $this->text ?>
 			</div>
 
-
-
 			<div class="vitrine-pic grid4">
 			  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
 			</div>
 
 			<div class="vitrine-details grid7">
-			 	<p><span>Ansprache:	</span><?= $this->vitrine_type?></p>
-			 	<p><span>Material:	</span><?= $this->vitrine_material?></p>
-				<p><span>Datierung:	</span><?= $this->vitrine_date?></p>
-				<p><span>Sonstiges:	</span><?= $this->vitrine_more?></p>
 
-				<span>	</span><p><?= $this->vitrine_url?></p>
+
+			 	<?php if ($this->vitrine_type): ?>
+			      <p><span>Ansprache:	</span><?= $this->vitrine_type?></p>
+			    <?php endif; ?>
+    			<?php if ($this->vitrine_material): ?>
+			      <p><span>Material:	</span><?= $this->vitrine_material?></p>
+			    <?php endif; ?>
+			    <?php if ($this->vitrine_date): ?>
+			      	<p><span>Datierung:	</span><?= $this->vitrine_date?></p>
+			    <?php endif; ?>
+			    <?php if ($this->vitrine_more): ?>
+			      <p><span>Sonstiges:	</span><?= $this->vitrine_more?></p>
+			    <?php endif; ?>
+
+
+
+
+				<p><span class="link">	</span><a href="http://<?= $this->vitrine_url?>" title="<?= $this->vitrine_url?>" target="_blank" alt="<?= $this->vitrine_url?>"><?= $this->vitrine_url?></a></p>
 			</div>
+
+			<div clas="back-navi">
+				<p class="back-navi">
+						<a href="javascript:void(0);" class="next" ></a>
+							</br>
+							<a href="javascript:void(0);" class="info pic"></a>
+						</br>
+							<a href="javascript:void(0);" class="previous" ></a>
+						</p>
+			</div>
+
+
 		</div>
 
 	</div>
 </div>
+
 <?php $this->endblock(); ?>
