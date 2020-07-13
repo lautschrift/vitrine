@@ -25,7 +25,7 @@ class ContentVitrine extends \ContentElement
 					if (TL_MODE == 'BE') {
 							$template = new \BackendTemplate('be_wildcard');
 							//$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['test'][0]).' ###';
-							$template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_name].' ###';
+							$template->wildcard = '###  ~ Vitrine '.utf8_strtoupper($GLOBALS['TL_DCA']['tl_content']['fields'][vitrine_name][label]).' ~ ###';
 							return $template->parse();
 					}
 
