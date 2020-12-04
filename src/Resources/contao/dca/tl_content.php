@@ -62,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['vitrine'] = '
 		 'inputType' => 'text',
  	 	 'sql'       => "varchar(255) NOT NULL default ''"
  );
- $GLOBALS['TL_DCA']['tl_content']['fields']['vitrine_SRC'} = array(
+ $GLOBALS['TL_DCA']['tl_content']['fields']['vitrine_SRC'] = array(
       'label' => array('Bild', 'Zusätzliches Bild'),
       'inputType' => 'fileTree',
       'eval' => [
