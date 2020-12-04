@@ -4,12 +4,22 @@
 	 $titleLang = $objPage->language;
 	 $title =  $arrFileMeta[$titleLang]['title'];
 	 $alt =  $arrFileMeta[$titleLang]['alt'];
+	 $altDE =  $arrFileMeta['de']['alt'];
+	 $lang = array (
+		'de' => ['v_type' => 'Ansprache', 'v_material' => 'Material', 'v_date' => "Datierung", 'v_more' => 'Sonstiges'],
+		'en' => ['v_type' => 'Description', 'v_material' => 'Material', 'v_date' => "Datation", 'v_more' => 'Others'],
+		'fr' => ['v_type' => 'Description', 'v_material' => 'Materiau', 'v_date' => "Datation", 'v_more' => 'Informations supplémentaires']
+	 );
+
+	 $loc = $lang[$titleLang];
 ?>
 
-<?php $this->extend('block_searchable'); ?>
+<?php $this->extend('block_searchable_vitrine'); ?>
 <?php $this->block('content'); ?>
 
-<div class="vitrine" id="<?php echo $title ?>">
+<div class="vitrine" id="<?php echo $altDE ?>">
+
+
 	<div class="animatable">
 
 		<div class="front">
@@ -18,18 +28,19 @@
 				<div clas="front-navi">
 					<p class="front-navi">
 							<a href="javascript:void(0);" class="next" ></a>
-								</br>
+								<br/>
 								<a href="javascript:void(0);" class="info"></a>
-							</br>
+							<br/>
 								<a href="javascript:void(0);" class="previous" ></a>
 							</p>
 				</div>
-				<div class="front-title"><h2 class="front-title">	<?= $this->vitrine_name ?></h2></div>
+				<div class="front-title"><h2><?= $this->vitrine_name?></h2></div>
 		</div>
 
 		<div class="back">
+
 			<div class="grid12">
-				<h2>	<?= $this->vitrine_name ?></h2>
+				<h2> <?= $this->vitrine_name ?>	</h2>
 			</div>
 			<div class="vitrine-text grid7">
 					<?= $this->text ?>
@@ -39,20 +50,21 @@
 			  <img src='<?php echo \FilesModel::findByUuid($this->arrData['singleSRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
 			</div>
 
+
 			<div class="vitrine-details grid7">
 
 
 			 	<?php if ($this->vitrine_type): ?>
-			      <p><span>Ansprache:	</span><?= $this->vitrine_type?></p>
+			      <p><span><?php echo $loc['v_type'] ?> :	</span><?= $this->vitrine_type?></p>
 			    <?php endif; ?>
     			<?php if ($this->vitrine_material): ?>
-			      <p><span>Material:	</span><?= $this->vitrine_material?></p>
+			      <p><span><?php echo $loc['v_material'] ?> :	</span><?= $this->vitrine_material?></p>
 			    <?php endif; ?>
 			    <?php if ($this->vitrine_date): ?>
-			      	<p><span>Datierung:	</span><?= $this->vitrine_date?></p>
+			      	<p><span><?php echo $loc['v_date'] ?> :	</span><?= $this->vitrine_date?></p>
 			    <?php endif; ?>
 			    <?php if ($this->vitrine_more): ?>
-			      <p><span>Sonstiges:	</span><?= $this->vitrine_more?></p>
+			      <p><span><?php echo $loc['v_more'] ?> :	</span><?= $this->vitrine_more?></p>
 			    <?php endif; ?>
 
 
@@ -61,6 +73,11 @@
 				<p><span class="link">	</span><a href="http://<?= $this->vitrine_url?>" title="<?= $this->vitrine_url?>" target="_blank" alt="<?= $this->vitrine_url?>"><?= $this->vitrine_url?></a></p>
 			</div>
 
+			<?php if (($this->arrData['vitrine_SRC']) != NULL): ?>
+			<div class="vitrine-pic grid4">
+			  <img src='<?php echo \FilesModel::findByUuid($this->arrData['vitrine_SRC'])->path; ?>' title="<?php echo $title ?>" alt="<?php echo $alt ?>">
+			</div>
+			<?php endif; ?>
 			<div clas="back-navi">
 				<p class="back-navi">
 						<a href="javascript:void(0);" class="next" ></a>
@@ -71,8 +88,8 @@
 						</p>
 			</div>
 
+			</div>
 
-		</div>
 
 	</div>
 </div>
